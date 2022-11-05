@@ -19,3 +19,4 @@ class Windows:
              self.surface.blit(bgcolr)
              self.screen_display.update()
         pygame.quit()
+# Make a hybrid tkinter-like pygame system is the job of LibSuzuki! (LibSzk)
