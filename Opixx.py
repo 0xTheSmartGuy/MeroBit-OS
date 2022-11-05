@@ -3,7 +3,7 @@ import pygame_widgets
 from pygame_widgets.widget import WidgetBase
 from pygame_widgets.mouse import Mouse, MouseState
 
-class OpixxWidget(WidgetBase): # With help of code @AustL GitHub
+class OpixxWidget(WidgetBase): # With inspiration from code of @AustL GitHub
     REPEAT_DELAY = 4
     REPEAT_INTERVAL = 7
     CURSOR_INTERVAL = 4
