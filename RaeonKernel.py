@@ -1,6 +1,6 @@
 from importlib.abc import MetaPathFinder
 import secrets, sys
-def gentable(addrspace):
+def gentable(addrspace): # Address space generator
    global a
    a = {"0x"+secrets.token_hex(addrspace//8) for i in range(addrspace//8)}
 def attrib():
@@ -34,4 +34,4 @@ if "# Allowed to rdmem_kspace" in open(__file__).read():
  pass
 else:
      def proc_rdmem_kspace():
-        return None # Brick the unauthorized accesses!
+        return None # Brick the unauthorized rdp systems!
