@@ -1,7 +1,7 @@
 import pygame
 pygame.init()
 
-# LibSzk can be integrated to LibGrphc
+# LibSzk can not be integrated to LibGrphc
 class Windows:
      def __init__(self, width, height, wintitle, bgcolr):
         self.width = width
