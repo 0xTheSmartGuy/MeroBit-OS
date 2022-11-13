@@ -3,6 +3,13 @@ import secrets, sys, base64
 def gentable(addrspace): # Address space generator
    global a
    a = {"0x"+secrets.token_hex(addrspace//8) for i in range(addrspace//8)}
+def kill(pcs):
+   a[a.keys()[pcs]]=None
+   return True
+def OOMKill(rr):
+   l=a.index(random.choice(a.keys()))
+   kill(l)
+   print("oom_killer : pid "+ str(l)+" ugh!!!!! killed!")
 def attrib():
    l = False
    while l == False:
@@ -10,6 +17,7 @@ def attrib():
        if a[w] is not None:
         if len(w) == a.index(w):
          return "Error: No more space!"
+         OOMKill(rr)
         else:
              continue
        else:
