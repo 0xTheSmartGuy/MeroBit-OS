@@ -16,13 +16,13 @@ def on_drag_motion(event):
     x = widget.winfo_x() - widget._drag_start_x + event.x
     y = widget.winfo_y() - widget._drag_start_y + event.y
     widget.place(x=x, y=y)
-def make_window(bd=10, xy, bg="white", nmproc):
+def make_window(bd=10, xy, bg="white"):
    # Yes i like Kanaria >:(
    kanaria = Frame(wm, width=xy[0], height=xy[1], bg, bd=bd)
    l = Button(kanaria, text="X", command=kanaria.destroy) # Yes AGAIN!
    l.place(relx=1, rely=0, anchor='ne')
    make_draggable(kanaria)
-   rk.attrib(nmproc)
+   rk.attrib()
    return kanaria # Return the actual window
    
    
